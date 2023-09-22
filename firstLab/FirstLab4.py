@@ -56,7 +56,7 @@ if __name__ == '__main__':
     glutInit()
     glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH)
     glutInitWindowSize(800, 600)
-    glutCreateWindow("Cone and Sphere")
+    glutCreateWindow("Cube and Sphere")
     glEnable(GL_DEPTH_TEST)
 
     glutDisplayFunc(display)
