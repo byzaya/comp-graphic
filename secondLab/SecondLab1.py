@@ -91,7 +91,7 @@ def display():
     glutSolidCube(150)
     glPopMatrix()
 
-    # ЦИЛИНДР - текстура
+    # КОНУС - текстура
     glPushMatrix()
     glEnable(GL_TEXTURE_2D)
     glRotatef(xrot, 1, 0, 0)
@@ -99,7 +99,7 @@ def display():
     glTranslatef(-100, 100, -150)
     cyl = gluNewQuadric()
     gluQuadricTexture(cyl, GLU_LINE)
-    gluCylinder(cyl, 50, 50, 120, 50, 50)
+    gluCylinder(cyl, 0, 50, 120, 50, 50)
     glDisable(GL_TEXTURE_2D)
     glPopMatrix()
 
