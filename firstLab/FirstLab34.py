@@ -4,6 +4,7 @@ from OpenGL.GLU import *
 
 xrot = 0.0
 yrot = 0.0
+change = 0.0
 
 
 def display():
@@ -28,7 +29,9 @@ def display():
 
     glRotatef(xrot, 1, 0, 0)
     glRotatef(yrot, 0, 1, 0)
-    glTranslatef(0, 0, 100)
+    if change == 1:
+        glTranslatef(0, 0, 100)
+    glTranslatef(50, 50, 50)
     glColor3f(0.0, 0.0, 1.0)
     glutWireSphere(50, 50, 50)
     glPopMatrix()
@@ -39,6 +42,7 @@ def display():
 def rotating(key, x, y):
     global xrot
     global yrot
+    global change
 
     if key == GLUT_KEY_UP:
         xrot -= 2.0
@@ -48,6 +52,10 @@ def rotating(key, x, y):
         yrot -= 2.0
     if key == GLUT_KEY_RIGHT:
         yrot += 2.0
+    if key == GLUT_KEY_F1:
+        change = 1
+    if key == GLUT_KEY_F2:
+        change = 0
 
     glutPostRedisplay()
 

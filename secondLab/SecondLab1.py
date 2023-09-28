@@ -122,6 +122,7 @@ def rotating(key, x, y):
         yrot -= 2.0
     if key == GLUT_KEY_RIGHT:
         yrot += 2.0
+
     if key == GLUT_KEY_F1:
         light_pos_y += 2
     if key == GLUT_KEY_F2:
