@@ -31,7 +31,8 @@ def display():
     glRotatef(yrot, 0, 1, 0)
     if change == 1:
         glTranslatef(0, 0, 100)
-    glTranslatef(50, 50, 50)
+    else:
+        glTranslatef(50, 50, 50)
     glColor3f(0.0, 0.0, 1.0)
     glutWireSphere(50, 50, 50)
     glPopMatrix()
