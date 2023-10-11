@@ -53,6 +53,8 @@ def display():
               0, 1, 0)
 
     # ДОДЕКАЭДР - текстура
+    # TODO текстура
+    # TODO перекатывания
     glPushMatrix()
     glRotatef(xrot, 1, 0, 0)
     glRotatef(yrot, 0, 1, 0)
