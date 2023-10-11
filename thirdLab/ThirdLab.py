@@ -48,7 +48,7 @@ def display():
 
     gluPerspective(45, (800 / 600), 1, 1000)
 
-    gluLookAt(15, 15, 15,
+    gluLookAt(10, 10, 10,
               0, 0, 0,
               0, 1, 0)
 
@@ -56,7 +56,7 @@ def display():
     glPushMatrix()
     glRotatef(xrot, 1, 0, 0)
     glRotatef(yrot, 0, 1, 0)
-    glTranslatef(-0.1, 3, -0.15)
+    glTranslatef(-1.5, -1.5, -1.5)
     glutSolidDodecahedron()
     glPopMatrix()
 
@@ -88,7 +88,6 @@ def display():
     glEnd()
     glDisable(GL_TEXTURE_2D)
     glPopMatrix()
-
 
     glutSwapBuffers()
 
