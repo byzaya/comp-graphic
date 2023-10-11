@@ -48,11 +48,8 @@ def display():
 
     gluPerspective(45, (800 / 600), 1, 1000)
 
-    # gluLookAt(300, 300, 300,
-    #           100, 100, 100,
-    #           0, 1, 0)
-    gluLookAt(30, 30, 30,
-              10, 10, 10,
+    gluLookAt(15, 15, 15,
+              0, 0, 0,
               0, 1, 0)
 
     # ДОДЕКАЭДР - текстура
@@ -72,7 +69,7 @@ def display():
     glTranslatef(-0.1, -0.50, -0.15)
     cyl = gluNewQuadric()
     gluQuadricTexture(cyl, GLU_LINE)
-    gluCylinder(cyl, 1.5, 1.5, 4, 50, 50)
+    gluCylinder(cyl, 3, 3, 6, 50, 50)
     glDisable(GL_TEXTURE_2D)
     glPopMatrix()
 
