@@ -60,7 +60,6 @@ def display():
     glutSolidDodecahedron()
     glPopMatrix()
 
-
     # ЦИЛИНДР - текстура
     glPushMatrix()
     glEnable(GL_TEXTURE_2D)
@@ -70,8 +69,26 @@ def display():
     cyl = gluNewQuadric()
     gluQuadricTexture(cyl, GLU_LINE)
     gluCylinder(cyl, 3, 3, 6, 50, 50)
+    glBegin(GL_POLYGON)
+    for i in range(50):
+        angle = 2 * 3.14159265 * i / 50
+        x = 3 * numpy.sin(angle)
+        y = 3 * numpy.cos(angle)
+        glTexCoord2f(x / 6 + 0.5, y / 6 + 0.5)
+        glVertex(x, y, 0)
+    glEnd()
+    glTranslatef(0, 0, 6)
+    glBegin(GL_POLYGON)
+    for i in range(50):
+        angle = 2 * 3.14159265 * i / 50
+        x = 3 * numpy.sin(angle)
+        y = 3 * numpy.cos(angle)
+        glTexCoord2f(x / 6 + 0.5, y / 6 + 0.5)
+        glVertex(x, y, 0)
+    glEnd()
     glDisable(GL_TEXTURE_2D)
     glPopMatrix()
+
 
     glutSwapBuffers()
 
